@@ -1,0 +1,6 @@
+{
+  "name": "Deniro 9 Ecosystem & Liquidity Bridge",
+  "description": "Prototype simulation platform for the Deniro 9 currency architecture, NZ 5.3B per-capita ceiling, 54-minute temporal node synchronization across the Pee Dub corridor, and cross-chain HTLC atomic swap bridge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

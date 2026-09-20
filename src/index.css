@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-display {
+    font-family: 'Orbitron', 'Rajdhani', monospace, sans-serif;
+  }
+  .font-mono-tech {
+    font-family: 'Space Mono', monospace;
+  }
+  .font-body {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .clip-octagon {
+    clip-path: polygon(
+      10px 0%, 
+      calc(100% - 10px) 0%, 
+      100% 10px, 
+      100% calc(100% - 10px), 
+      calc(100% - 10px) 100%, 
+      10px 100%, 
+      0% calc(100% - 10px), 
+      0% 10px
+    );
+  }
+
+  .clip-octagon-lg {
+    clip-path: polygon(
+      18px 0%, 
+      calc(100% - 18px) 0%, 
+      100% 18px, 
+      100% calc(100% - 18px), 
+      calc(100% - 18px) 100%, 
+      18px 100%, 
+      0% calc(100% - 18px), 
+      0% 18px
+    );
+  }
+
+  .clip-chamfer {
+    clip-path: polygon(
+      14px 0%,
+      100% 0%,
+      100% calc(100% - 14px),
+      calc(100% - 14px) 100%,
+      0% 100%,
+      0% 14px
+    );
+  }
+
+  .glass-panel {
+    background: rgba(10, 15, 29, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .glass-panel-glow {
+    background: linear-gradient(135deg, rgba(14, 23, 42, 0.8) 0%, rgba(8, 14, 26, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    box-shadow: 0 0 25px -5px rgba(20, 184, 166, 0.18), 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card-subtle {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+  }
+}
+
+/* Custom scanlines / radar sweep / fluid motion wave animations */
+@keyframes fluid-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02) translateY(-2px);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fluid-pulse {
+  animation: fluid-pulse 4s ease-in-out infinite;
+}
+
+.animate-radar-sweep {
+  animation: sweep 8s linear infinite;
+}
